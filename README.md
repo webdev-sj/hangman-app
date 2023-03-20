@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+Hangman Game - React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple Hangman game created using React and Redux. The game allows users to guess a hidden word, one letter at a time, with a limited number of attempts.
+Features
 
-## Available Scripts
+   Redux for state management
+   Keyboard and on-screen letter input support
+   Rules and history information
+   Responsive design
 
-In the project directory, you can run:
+Installation and Setup
 
-### `npm start`
+To install and run the project locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   Clone the repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+git clone https://github.com/webdev-sj/hangman-game.git
 
-### `npm test`
+   Change into the project directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+cd hangman-game
 
-### `npm run build`
+   Install dependencies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   Start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm start
 
-### `npm run eject`
+The application should now be running on http://localhost:3000.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Components
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application is composed of the following components:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   Header: Displays the header and controls for showing the rules and history.
+   StickFigure: Renders the stick figure based on the number of wrong guesses.
+   GuessWord: Displays the hidden word with correctly guessed letters revealed.
+   Letters: Renders the on-screen letter input buttons and shows used letters.
+   Popup: Displays a modal with the game result and an option to restart the game.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Application Structure
 
-## Learn More
+The application is structured as follows:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   App.js: Contains the main application logic, state management, and rendering.
+   redux/: Contains Redux-related files, such as actions and reducers.
+   components/: Contains the React components.
+   App.css: Contains the styling for the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Contributing
 
-### Code Splitting
+Contributions are welcome! Please feel free to submit a pull request or open an issue to suggest new features or improvements.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Licence
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.

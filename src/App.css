@@ -1,38 +1,258 @@
-.App {
-  text-align: center;
+/* Global styles */
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, #root {
+  align-items: center;
+  background-color: #fff;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  margin: 0;
+  min-height: fit-content; 
+  padding-bottom: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Navbar styles */
+.navbar-div img{
+  margin: 10px;
+  padding: 10px;
+}
+
+.nav-btn {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-btn button {
+  border-radius:5px;
+  border: none;
+  background-color: #6795ab;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.nav-btns {
+  cursor: pointer;
+}
+
+/* Logo styles */
+.logo {
+  width: 200px;
+}
+
+/* Game container styles */
+h1 {
+  margin: 20px 0 0;
+}
+
+.game-container {
+  background-color: #f5f5dc;
+  border: 5px solid #6795ab;
+  border-radius: 20px;
+  height: 330px;
+  margin: auto;
+  max-width: 90vw;
+  padding: 20px 30px;
+  position: relative;
+}
+
+/* Figure container and part styles */
+.figure-container {
+  fill: transparent;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 5px;
+  stroke-linecap: round;
+}
+
+.figure-part {
+  display: none;
+}
+
+.figure-wrapper {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+/* Word and letter styles */
+.word {
+  bottom: 10px;
+  display: flex;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.letter {
+  align-items: center;
+  border-bottom: 5px solid #6795ab;
+  color: #6795ab;
+  display: inline-flex;
+  font-size: 35px;
+  font-weight: bold;
+  height: 50px;
+  justify-content: center;
+  margin: 0 5px;
+  padding-top: 5px;
+  width: 20px;
+}
+
+/* Keyboard styles */
+.letters {
+  border: 5px solid #6795ab;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 60px;
+  padding: 15px;
+}
+.letters button {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .letters {
+    padding: 9px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.letter-button {
+  border-radius: 5px;
+  border: 2px solid #6795ab;
+  background-color: white;
+  color: #6795ab;
+  font-weight: bold;
+  font-size: 20px;
+  min-width: 35px;
+  padding: 5px 10px;
+}
+button.letter-button:hover {
+  background-color: #f5f5dc;
+  transform: rotate(20deg);
+}
+.letter-button.bg-correct {
+  background-color: green;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.letter-button.bg-wrong {
+  background-color: gray;
+  color: lightgray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Popup styles */
+.popup-container {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  bottom: 0;
+  display: none;
+  height: fit-content;
+  justify-content: center;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: fit-content;
+}
+  
+.popup {
+  border-radius: 15px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 3vw;
+  height: 80vh;
+  padding: 20px;
+  text-align: center;
+  width: 80vw;
+}
+  
+.popup button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 20px;
+  color: #6795ab;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 12px 20px;
+}
+
+.popup button:active {
+  transform: scale(0.98);
+}
+
+.popup button:focus {
+  outline: 0;
+}
+
+.help-btn {
+  cursor: help;
+}
+  
+/* History and help styles */
+.history, .help {
+  background-color: #6795ab;
+  border: 10px solid #f5f5dc;
+  border-radius: 20px;
+  color: #f5f5dc;
+  padding: 20px 30px;
+  height: 350px;
+  margin-bottom: 20px;
+  position: relative;
+  width: 450px;
+}
+
+.history{
+  overflow-y: scroll;
+}
+
+
+/* Replay button styles */
+button.replayBtn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 1.2rem;
+}
+
+button.replayBtn:hover {
+  color: #6795ab;
+  background-color: white;
+  font-weight: bold;
+  transform: rotate(15deg);
+}
+
+/* Final message styles */
+.finalMessage {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 80px;
+}
+
+.revealWord {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 60px;
+}
+
+@media screen and (max-width: 600px) {
+  .finalMessage {
+  font-size: 50px;
+}
+
+.revealWord {
+  font-size: 50px;
   }
 }
