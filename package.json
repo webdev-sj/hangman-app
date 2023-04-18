@@ -18,8 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build --repo https://${DEPLOY_TOKEN}@github.com/webdev-sj/hangman-app.git",
-    "build": "react-scripts build",
+    "deploy": "gh-pages -b master -d build --repo https://${GITHUB_TOKEN}:x-oauth-basic@github.com/webdev-sj/hangman-app.git"    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
