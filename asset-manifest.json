@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/webdev-sj/hangman-app/static/css/main.d4c78c21.css",
+    "main.js": "/webdev-sj/hangman-app/static/js/main.d82981f8.js",
+    "static/media/stickManLogo.png": "/webdev-sj/hangman-app/static/media/stickManLogo.43fb2b21dcd4671f9e9b.png",
+    "index.html": "/webdev-sj/hangman-app/index.html",
+    "main.d4c78c21.css.map": "/webdev-sj/hangman-app/static/css/main.d4c78c21.css.map",
+    "main.d82981f8.js.map": "/webdev-sj/hangman-app/static/js/main.d82981f8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4c78c21.css",
+    "static/js/main.d82981f8.js"
+  ]
+}
